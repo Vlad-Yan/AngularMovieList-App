@@ -23,4 +23,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.movieList = this.movieListService.getTodoList();
   }
+
+  removeItem(item: MovieItem): void {
+    this.movieListService.deleteItem(item);
+  }
 }

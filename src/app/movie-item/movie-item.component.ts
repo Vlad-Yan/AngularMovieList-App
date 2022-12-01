@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MovieItem} from "../interfaces/movie-item";
 
 @Component({
@@ -11,10 +11,12 @@ import {MovieItem} from "../interfaces/movie-item";
 export class MovieItemComponent implements OnInit {
 
   @Input() item: MovieItem;
-
-  constructor() { }
+  @Output() remove: EventEmitter<MovieItem> = new EventEmitter<MovieItem>();
 
   ngOnInit(): void {
   }
 
+  removeItem(): void {
+    this.remove.emit(this.item);
+  }
 }

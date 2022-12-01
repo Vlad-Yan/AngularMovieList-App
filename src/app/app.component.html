@@ -8,6 +8,7 @@
 
 <div class="card" >
   <app-movie-item *ngFor="let movieItem of movieList"
-                  [item]="movieItem">
+                  [item]="movieItem"
+                  (remove)="removeItem($event)">
   </app-movie-item>
 </div>
