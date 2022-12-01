@@ -6,6 +6,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import {MovieItemModule} from "./movie-item/movie-item.module";
+import {FormModule} from "./form/form.module";
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import {MovieItemModule} from "./movie-item/movie-item.module";
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    MovieItemModule
+    MovieItemModule,
+    FormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

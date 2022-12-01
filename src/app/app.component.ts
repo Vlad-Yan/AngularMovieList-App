@@ -5,7 +5,7 @@ import {MovieItem} from "./interfaces/movie-item";
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   title = 'Список дел';
@@ -47,4 +47,10 @@ export class AppComponent {
       favorite: false
     },
   ]
+
+  addItem(movie: MovieItem) {
+    console.log("movie", movie)
+    this.movieList.push(movie);
+  }
+
 }

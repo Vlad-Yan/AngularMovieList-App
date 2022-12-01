@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <mat-form-field class="size-form" appearance="fill">
+    <mat-label>Название фильма</mat-label>
+    <input matInput formControlName="title">
+    <mat-error [hidden]="form.valid || form.untouched">
+      Поле название фильма не может быть пустым
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="size-form" appearance="fill">
+    <mat-label>Жанр фильма</mat-label>
+    <mat-select formControlName="genre">
+      <mat-option value="Боевик">Боевик</mat-option>
+      <mat-option value="Драма">Драма</mat-option>
+      <mat-option value="Комедия">Комедия</mat-option>
+      <mat-option value="Мультфильм">Мультфильм</mat-option>
+      <mat-option value="Приключение">Приключение</mat-option>
+      <mat-option value="Ужасы">Ужасы</mat-option>
+      <mat-option value="Фантастика">Фантастика</mat-option>
+    </mat-select>
+    <mat-error [hidden]="form.valid || form.untouched">
+      Выберете жанр фильма
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="size-form" appearance="fill">
+    <mat-label>URL обложки фильма</mat-label>
+    <input matInput formControlName="url" >
+    <mat-error [hidden]="form.valid || form.untouched">
+      Некорректный URL
+    </mat-error>
+  </mat-form-field>
+  <div style="text-align: center">
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Добавить фильм</button>
+  </div>
+</form>
