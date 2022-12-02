@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {MatDialogRef} from "@angular/material/dialog";
+import {MovieItem} from "../interfaces/movie-item";
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  selector: 'app-modal-dialog',
+  templateUrl: 'modal.component-dialog.html',
 })
-export class ModalComponent {
+
+export class DialogElementsExampleDialog {
+
+  @Output() sendMovie: EventEmitter<MovieItem> = new EventEmitter<MovieItem>();
+
+  constructor(public dialogRef: MatDialogRef<DialogElementsExampleDialog>) { }
+
+  closeDialog(movie: MovieItem) {
+    this.dialogRef.close(movie);
+
+  }
+
 
 }

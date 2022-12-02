@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import {MovieItemModule} from "./movie-item/movie-item.module";
 import {FormModule} from "./form/form.module";
 import {MovieListService} from "./services/movie-list.service";
+import { ModalModule } from './modal/modal.module';
+import {ButtonTogglesModule} from "./button-toggles/button-toggles.module";
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {MovieListService} from "./services/movie-list.service";
     MatButtonModule,
     MatGridListModule,
     MovieItemModule,
-    FormModule
+    FormModule,
+    ModalModule,
+    ButtonTogglesModule
   ],
   providers: [MovieListService],
   bootstrap: [AppComponent]

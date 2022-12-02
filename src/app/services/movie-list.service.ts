@@ -76,6 +76,12 @@ export class MovieListService {
     this.saveList();
   }
 
+  changeFavourite(item: MovieItem):void {
+    const index = this.movieList.indexOf(item);
+    this.movieList[index].favorite = !this.movieList[index].favorite ;
+    this.saveList();
+  }
+
   getTodoList(): MovieItem[] {
     return this.movieList;
   }

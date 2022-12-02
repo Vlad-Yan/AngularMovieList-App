@@ -14,8 +14,14 @@
     </mat-card-title-group>
   </mat-card-header>
   <mat-card-actions>
-    <button mat-button>Добавить в избранное</button>
-    <button mat-button>Изменить</button>
+    <button mat-button (click)="changeFavourite()">
+      <div *ngIf="!item.favorite; else noFavorite">Добавить в избранное</div>
+      <ng-template #noFavorite>
+        Убрать из избранного
+      </ng-template>
+
+    </button>
+    <button mat-button >Изменить</button>
     <button mat-button (click)="removeItem()">Удалить</button>
   </mat-card-actions>
 </mat-card>

@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalComponent } from './modal.component';
+import {DialogElementsExampleDialog} from './modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {FormModule} from "../form/form.module";
 
 
 
 @NgModule({
   declarations: [
-    ModalComponent
+    DialogElementsExampleDialog
+  ],
+  exports: [
+    DialogElementsExampleDialog
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatDialogModule,
+    MatButtonModule,
+    FormModule
   ]
 })
 export class ModalModule { }

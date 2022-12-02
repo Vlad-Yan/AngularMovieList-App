@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import { FormControl, FormGroup, Validators} from "@angular/forms";
 import {MovieItem} from "../interfaces/movie-item";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-form',
@@ -13,7 +14,7 @@ export class FormComponent implements OnInit
 
   form!: FormGroup;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -27,11 +28,10 @@ export class FormComponent implements OnInit
   }
   submit() {
     if (this.form.valid) {
-      console.log("Form: ", this.form);
-      const formData = {...this.form.value}
-      console.log("Form Data:", formData)
       this.onSubmit.emit(this.form.value)
-      this.form.reset()
+      // this.form.reset()
+      // closeDialog();
+      // this.dialog.closeAll();
     }
   }
 }

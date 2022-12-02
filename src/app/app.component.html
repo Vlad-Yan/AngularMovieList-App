@@ -1,14 +1,23 @@
 <h1>{{title}}</h1>
 
-<app-form (onSubmit)="addItem($event)"></app-form>
+<!--<button mat-button (click)="openDialog()">Launch dialog</button>-->
+<!--<app-modal></app-modal>-->
+<button mat-raised-button color="primary" (click)="openDialog()">Добавить фильм</button>
+<!--(sendMovie)="addItem($event)"-->
+
+<!--<app-form (onSubmit)="addItem($event)"></app-form>-->
 
 <hr>
+
+<app-button-toggles></app-button-toggles>
 
 <h2>Фильмы</h2>
 
 <div class="card" >
   <app-movie-item *ngFor="let movieItem of movieList"
                   [item]="movieItem"
-                  (remove)="removeItem($event)">
+                  (remove)="removeItem($event)"
+                  (favourite)="changeFavourite($event)"
+                  >
   </app-movie-item>
 </div>
