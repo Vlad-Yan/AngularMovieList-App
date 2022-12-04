@@ -1,11 +1,13 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <mat-form-field class="size-form" appearance="fill">
     <mat-label>Название фильма</mat-label>
-    <input matInput formControlName="title">
+    <input matInput formControlName="title" >
     <mat-error [hidden]="form.valid || form.untouched">
       Поле название фильма не может быть пустым
     </mat-error>
   </mat-form-field>
+
+<!--  <h1>{{item.title}}</h1>-->
 
   <mat-form-field class="size-form" appearance="fill">
     <mat-label>Жанр фильма</mat-label>

@@ -2,7 +2,7 @@
   <mat-card-header>
     <img mat-card-xl-image src="{{item.url}}" alt="img">
 
-    <mat-card-title-group>
+    <mat-card-title-group style="margin-left: 1rem">
       <mat-card-subtitle>Название фильма:</mat-card-subtitle>
       <mat-card-title>
         <!--            <app-movie-item [item]="movieItem"></app-movie-item>-->
@@ -19,9 +19,12 @@
       <ng-template #noFavorite>
         Убрать из избранного
       </ng-template>
-
     </button>
-    <button mat-button >Изменить</button>
+
+<!--    <button mat-raised-button color="primary" (click)="openDialog()">Добавить фильм</button>-->
+
+<!--    <button mat-button (click)="updateItem()" >Изменить</button>-->
+    <button mat-button (click)="openDialog()">Изменить</button>
     <button mat-button (click)="removeItem()">Удалить</button>
   </mat-card-actions>
 </mat-card>

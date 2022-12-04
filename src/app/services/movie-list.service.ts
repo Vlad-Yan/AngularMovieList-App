@@ -65,6 +65,7 @@ export class MovieListService {
   }
 
   updateItem(item: MovieItem, changes: MovieItem): void {
+    console.log("Update")
     const index = this.movieList.indexOf(item);
     this.movieList[index] = { ...item, ...changes };
     this.saveList();

@@ -18,6 +18,7 @@
                   [item]="movieItem"
                   (remove)="removeItem($event)"
                   (favourite)="changeFavourite($event)"
+                  (update)="updateItem(movieItem, $event)"
                   >
   </app-movie-item>
 </div>

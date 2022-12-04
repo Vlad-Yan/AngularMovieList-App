@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Добавить фильм</h1>
 <div mat-dialog-content>
-  <app-form (onSubmit)="closeDialog($event)"></app-form>
+  <app-form (onSubmit)="closeDialog($event)" [item]="data"></app-form>
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Закрыть</button>

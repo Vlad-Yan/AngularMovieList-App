@@ -32,10 +32,15 @@ export class AppComponent implements OnInit {
     this.movieListService.updateItem(item, changes);
   }
 
+
   openDialog() {
-    const dialogRef = this.dialog.open(DialogElementsExampleDialog);
+    const dialogRef = this.dialog.open(DialogElementsExampleDialog, {
+      data: null
+    });
     dialogRef.afterClosed().subscribe(result => {
-      this.addItem(result);
+      if (result != null) {
+        this.addItem(result);
+      }
     })
   }
 
