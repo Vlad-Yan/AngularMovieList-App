@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-button-toggles',
@@ -7,7 +8,14 @@ import { Component } from '@angular/core';
 })
 export class ButtonTogglesComponent {
 
-  onToggleChange() {
-    console.log('onToggleChange');
+  constructor(private router: Router) {}
+
+  goToAllMoviesPage() {
+    this.router.navigate(['/'])
   }
+
+  goToFavoriteMoviesPage() {
+    this.router.navigate(['/favorite'])
+  }
+
 }

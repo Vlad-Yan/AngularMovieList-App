@@ -10,11 +10,16 @@ import {FormModule} from "./form/form.module";
 import {MovieListService} from "./services/movie-list.service";
 import { ModalModule } from './modal/modal.module';
 import {ButtonTogglesModule} from "./button-toggles/button-toggles.module";
+import {AppRoutingModule} from "./app-routing.module";
+import {AllMoviesPage} from "./all-movies-page/all-movies-page.component";
+import {FavoriteMoviesPage} from "./favorite-movies-page/favorite-movies-page.component";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AllMoviesPage,
+    FavoriteMoviesPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,8 @@ import {ButtonTogglesModule} from "./button-toggles/button-toggles.module";
     MovieItemModule,
     FormModule,
     ModalModule,
-    ButtonTogglesModule
+    ButtonTogglesModule,
+    AppRoutingModule
   ],
   providers: [MovieListService],
   bootstrap: [AppComponent]

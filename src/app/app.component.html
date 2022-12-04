@@ -9,16 +9,22 @@
 
 <hr>
 
-<app-button-toggles></app-button-toggles>
-
 <h2>Фильмы</h2>
 
-<div class="card" >
-  <app-movie-item *ngFor="let movieItem of movieList"
-                  [item]="movieItem"
-                  (remove)="removeItem($event)"
-                  (favourite)="changeFavourite($event)"
-                  (update)="updateItem(movieItem, $event)"
-                  >
-  </app-movie-item>
-</div>
+<app-button-toggles></app-button-toggles>
+
+<router-outlet>
+
+  <div class="card" >
+    <app-movie-item *ngFor="let movieItem of movieList"
+                    [item]="movieItem"
+                    (remove)="removeItem($event)"
+                    (favourite)="changeFavourite($event)"
+                    (update)="updateItem(movieItem, $event)"
+    >
+    </app-movie-item>
+  </div>
+
+</router-outlet>
+
+

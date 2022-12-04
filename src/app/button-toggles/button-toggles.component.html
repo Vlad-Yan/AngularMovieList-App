@@ -1,6 +1,6 @@
-<mat-button-toggle-group name="filter" aria-label="Font Style" (change)="onToggleChange()">
-  <mat-button-toggle value="Все" [checked]="true">Все</mat-button-toggle>
-  <mat-button-toggle value="Избранные">Избранные</mat-button-toggle>
+<mat-button-toggle-group name="filter" aria-label="Font Style">
+  <mat-button-toggle value="Все" [checked]="true" (click)="goToAllMoviesPage()">Все</mat-button-toggle>
+  <mat-button-toggle value="Избранные" (click)="goToFavoriteMoviesPage()">Избранные</mat-button-toggle>
 </mat-button-toggle-group>
 <!--mat-button-toggle mat-button-toggle-appearance-standard mat-button-toggle-checked-->
 <!--mat-button-toggle mat-button-toggle-appearance-standard-->
