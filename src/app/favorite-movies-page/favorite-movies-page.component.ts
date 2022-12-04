@@ -1,5 +1,5 @@
 import {Component} from '@angular/core'
-import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,5 @@ import {Router} from "@angular/router";
   styleUrls: ['./favorite-movies-page.component.scss']
 })
 export class FavoriteMoviesPage {
-  // constructor(private router: Router) {}
-
-  // goToPostPage() {
-  //   this.router.navigate(['/posts'])
-  // }
+  favorite = true;
 }

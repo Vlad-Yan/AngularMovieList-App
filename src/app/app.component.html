@@ -11,12 +11,12 @@
 
 <h2>Фильмы</h2>
 
-<app-button-toggles></app-button-toggles>
+<app-button-toggles (allMovies)="getAllMovies()" (favoriteMovies)="getFavoriteMovies()"></app-button-toggles>
 
 <router-outlet>
 
   <div class="card" >
-    <app-movie-item *ngFor="let movieItem of movieList"
+    <app-movie-item *ngFor="let movieItem of movieList | filterMoviesByFavorites: favorite"
                     [item]="movieItem"
                     (remove)="removeItem($event)"
                     (favourite)="changeFavourite($event)"

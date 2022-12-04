@@ -13,13 +13,15 @@ import {ButtonTogglesModule} from "./button-toggles/button-toggles.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {AllMoviesPage} from "./all-movies-page/all-movies-page.component";
 import {FavoriteMoviesPage} from "./favorite-movies-page/favorite-movies-page.component";
+import { FilterMoviesByFavoritesPipe } from './pipes/filter-movies-by-favorites.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AllMoviesPage,
-    FavoriteMoviesPage
+    FavoriteMoviesPage,
+    FilterMoviesByFavoritesPipe
   ],
   imports: [
     BrowserModule,

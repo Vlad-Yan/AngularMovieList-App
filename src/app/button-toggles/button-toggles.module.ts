@@ -4,7 +4,6 @@ import { ButtonTogglesComponent } from './button-toggles.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
-
 @NgModule({
   declarations: [
     ButtonTogglesComponent

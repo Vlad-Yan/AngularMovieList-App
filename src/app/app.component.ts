@@ -11,6 +11,7 @@ import {DialogElementsExampleDialog} from "./modal/modal.component";
 })
 export class AppComponent implements OnInit {
   title = 'Список дел';
+  favorite = false;
 
   movieList!: MovieItem[];
 
@@ -46,5 +47,13 @@ export class AppComponent implements OnInit {
 
   changeFavourite(item: MovieItem): void {
     this.movieListService.changeFavourite(item);
+  }
+
+  getAllMovies() {
+    this.favorite = false;
+  }
+
+  getFavoriteMovies() {
+    this.favorite = true;
   }
 }
