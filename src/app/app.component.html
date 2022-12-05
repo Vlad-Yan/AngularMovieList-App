@@ -13,18 +13,6 @@
 
 <app-button-toggles (allMovies)="getAllMovies()" (favoriteMovies)="getFavoriteMovies()"></app-button-toggles>
 
-<router-outlet>
-
-  <div class="card" >
-    <app-movie-item *ngFor="let movieItem of movieList | filterMoviesByFavorites: favorite"
-                    [item]="movieItem"
-                    (remove)="removeItem($event)"
-                    (favourite)="changeFavourite($event)"
-                    (update)="updateItem(movieItem, $event)"
-    >
-    </app-movie-item>
-  </div>
-
-</router-outlet>
+<router-outlet></router-outlet>
 
 

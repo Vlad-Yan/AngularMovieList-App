@@ -1,0 +1,9 @@
+<div class="card" >
+  <app-movie-item *ngFor="let movieItem of movieList"
+                  [item]="movieItem"
+                  (remove)="removeItem($event)"
+                  (favourite)="changeFavourite($event)"
+                  (update)="updateItem(movieItem, $event)"
+  >
+  </app-movie-item>
+</div>

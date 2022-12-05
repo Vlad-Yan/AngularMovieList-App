@@ -10,7 +10,7 @@ import {DialogElementsExampleDialog} from "./modal/modal.component";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'Список дел';
+  title = 'Список фильмов';
   favorite = false;
 
   movieList!: MovieItem[];
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.movieList = this.movieListService.getTodoList();
+    this.movieList = this.movieListService.getMovieList();
   }
 
   removeItem(item: MovieItem): void {

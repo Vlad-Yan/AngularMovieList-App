@@ -83,7 +83,7 @@ export class MovieListService {
     this.saveList();
   }
 
-  getTodoList(): MovieItem[] {
+  getMovieList(): MovieItem[] {
     return this.movieList;
   }
 }
